@@ -12,7 +12,7 @@
 				}
 				
 				function verifyToken(tokenValue) {
-					$.get('http://localhost:8080/mobile-app-ws/users/email-verification', {token: tokenValue})
+					$.get('http://localhost:8080/mobile-app-ws/users/email-verification', {token: tokenValue}) // Replace localhost with your aws EC2 instance before deployment
 					.done(function (response) {
 						if (response["operationResult"] === "SUCCESS") {
 							$("#not-successful-result").attr( "style", "display: none !important;" );
